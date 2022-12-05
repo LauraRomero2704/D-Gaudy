@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>puerto</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>usuarioCorreo</param-name>
+        <param-value>dgaudy0@gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>qjgernncpgyvfzpi</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>EliminarPrenda</servlet-name>
+        <servlet-class>Controlador.EliminarPrenda</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BorrarCarrito</servlet-name>
+        <servlet-class>Controlador.BorrarCarrito</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrarCarrito</servlet-name>
+        <url-pattern>/borraritem</url-pattern>
+    </servlet-mapping>
+</web-app>

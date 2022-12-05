@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="780" pageHeight="842" columnWidth="740" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cce9d748-a611-4a66-b2b9-6a1b99d7f3b0">
+	<property name="ireport.zoom" value="1.4641000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from categoria]]>
+	</queryString>
+	<field name="ide_cat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_cat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_cat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="ide_cat">
+		<groupExpression><![CDATA[$F{ide_cat}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="392" y="20" width="156" height="30" uuid="a78b41a2-5bb1-429a-acef-04be8579870b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isItalic="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Centro comercial San Martín]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="324" y="20" width="68" height="30" uuid="a3bfec39-cb1f-4d1b-b63e-0e4bd3239ed9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="51" width="122" height="34" uuid="570a320f-bf28-4fdf-b350-1a8f6ca82508"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isItalic="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Dgaudy0@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="104" width="740" height="1" uuid="4da96c60-a84e-4b8b-b1d3-3f05d80b36f6"/>
+			</line>
+			<image>
+				<reportElement x="36" y="18" width="197" height="86" uuid="482bc649-0f3b-4da8-92ee-6604117b6a6c"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\imagenes\\logo\\logo.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="324" y="50" width="128" height="35" uuid="8e1bfc5a-5448-4e3d-98b7-ea8bc9f1a109"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Correo electrónico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="582" y="20" width="137" height="30" uuid="2a58fbdb-643e-423e-b493-467c056cb80a"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Creación de reporte:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="586" y="44" width="114" height="30" uuid="b5b66cf9-02d8-4b83-ac5e-ceff8de952ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isItalic="false" isUnderline="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="105" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="262" y="71" width="215" height="20" backcolor="#7BEBE8" uuid="b5f7b312-c852-4169-8c93-3a9153040a72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph spacingAfter="5" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="71" width="215" height="20" backcolor="#7BEBE8" uuid="b74a7ab8-9bc8-4a01-87e6-c48fa250c209"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph spacingAfter="5" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="44" y="71" width="215" height="20" backcolor="#7BEBE8" uuid="e1623fb4-13bc-433c-a443-94a22b27c43a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="44" y="90" width="651" height="1" forecolor="#B89F7D" backcolor="#0DCECE" uuid="e8683b8d-956d-4fed-b15a-94274f89038f"/>
+			</frame>
+			<staticText>
+				<reportElement mode="Opaque" x="207" y="0" width="376" height="46" uuid="b3505b43-d899-4baf-8833-58473ce013a8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CATEGORIAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="44" y="1" width="215" height="20" uuid="46a11409-a22c-4865-bbd8-2232d939bc82"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ide_cat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="1" width="215" height="20" uuid="91dd6f0b-3b73-4ea8-bc26-df74ef0798cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nom_cat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="1" width="215" height="20" uuid="8906eb18-5348-427d-89ad-c0b687eff9ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estado_cat}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="44" y="38" width="651" height="1" forecolor="#B89F7D" backcolor="#0DCECE" uuid="379ff0b1-a9e0-4aa2-b855-1afd4d25b27c"/>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="381" y="21" width="66" height="20" uuid="1970b097-1583-4d3b-95eb-4a8ea533c499"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[D'Gaudy.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="654" y="-2" width="103" height="54" uuid="b4751257-2894-4eeb-9ba4-00056b10d367"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\imagenes\\logo\\checklist.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="44" y="21" width="336" height="20" uuid="3fd775f3-5e8c-4082-bf09-311e29df8c2b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Representación impresa de reportes de categorias de la empresa ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

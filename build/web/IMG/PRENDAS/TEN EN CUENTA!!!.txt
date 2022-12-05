@@ -1,0 +1,7 @@
+
+Los nombres de las imagenes -> Todo en mayuscula :)
+
+Para llamar una prenda debe de empezar siempre por la categoria a la que corresponde y finalizar por el numero a la que correponde:
+
+JEAN-1 :)
+SHORT-1  etc :)

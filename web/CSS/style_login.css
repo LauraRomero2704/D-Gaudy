@@ -1,0 +1,485 @@
+
+/* FUENTES */
+@font-face
+{
+    font-family: fuente;
+    src: url(../FUENTES/Lemon\ Love.ttf)
+}
+
+@font-face
+{
+    font-family: fuenteParrafo;
+    src: url(../FUENTES/CaviarDreams.ttf);
+}
+
+@font-face
+{
+    font-family: fuenteTitulo;
+    src: url(../FUENTES/CaviarDreams_Bold.ttf);
+}
+
+@font-face
+{
+    font-family: fuenteNegrota;
+    src: url(../FUENTES/Little\ Comet\ Demo\ Version.otf);
+}
+
+
+/* PAGINA*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fuenteTitulo; 
+}
+
+body
+{
+    background: #e6eaf5; 
+}
+
+.contenedor
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.contenedor .formularios
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.contenedor::before
+{
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    background: #191919;
+    transform: translateY(-50%);  
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.contenedor .formulario-iniciar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 500px;
+    height: 100vh;
+    padding: 0 10px;
+}
+
+.contenedor .titulo
+{
+    font-size: 65px;
+    letter-spacing: 1px;
+    font-family: fuente;
+    margin-bottom: 55px;
+}
+
+.mensaje
+{
+    margin-top: 35px;
+    font-size: 18px;
+    color: #C43B74;
+    text-align: center;
+}
+
+.registrarse-iniciar
+{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+form
+{
+    z-index: 2;
+}
+
+/* ETIQUETATES FLOTANTES */
+.formulario__grupo
+{
+	width: 100%;
+}
+
+.formulario__grupo-input
+{
+	position: relative;
+	width: 100%;
+}
+
+.formulario__input
+{
+	width: 100%;
+	padding: 13px;
+	border: 2px solid #525252;
+    background-color: transparent;
+    border-radius: 50px;
+	outline: none;
+	color: #191919;
+	font-family: fuenteTitulo;
+	font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.contenedor .formulario__grupo-input .btn-contraseña
+{
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.contenedor .formulario__grupo-input .btn-contraseña i
+{
+    text-align: center;
+    color: #191919f5;
+    font-size: 20px;
+}
+
+.formulario__label
+{
+	position: absolute;
+	left: 0;
+	padding: 15px 30px;
+	pointer-events: none;
+	font-size: 17px;
+	color:#191919;
+	font-family: fuenteTitulo;
+}
+
+.formulario__input:valid ~ .formulario__label,
+.formulario__input:focus ~ .formulario__label
+{
+	transform: translateX(25px) translateY(-10px);
+	font-size: 16px;
+	font-weight: bold;
+	padding: 1px 10px;
+	color: #191919;
+	background: #e6eaf5;
+	border-radius: 4px;
+	letter-spacing: 1px;
+}
+
+.formulario__input:valid,
+.formulario__input:focus
+{
+	padding-top: 16px;
+	padding-left: 10px;
+}
+
+/* VALIDACIONES */
+.formulario__input-error 
+{
+	font-size: 14px;
+	margin-top: -5px;
+	margin-left: 18px;
+	font-family: fuenteTitulo;
+	margin-bottom: 14px;
+	display: none;
+}
+
+.formulario__input-error-activo 
+{
+	display: block;
+}
+
+.formulario__validacion-estado 
+{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 100;
+	font-size: 18px;
+	opacity: 0;
+}
+
+.formulario__mensaje 
+{
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo 
+{
+	display: block;
+}
+
+.formulario__grupo-btn-enviar 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn
+{
+    width: 60%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: #0DCECE;
+    color: #F4F4F4;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.btn:hover
+{
+    background: #54e4e4;
+    box-shadow: 0px 0px 6px #54e4e4;
+}
+
+.mensaje
+{
+    margin-top: 35px;
+    font-size: 18px;
+    color: #C43B74;
+    text-align: center;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado 
+{
+	color: #00dfc4;
+	opacity: 1;
+}
+
+.formulario__grupo-correcto .formulario__input:valid ~ .formulario__label,
+.formulario__grupo-correcto .formulario__input:focus ~ .formulario__label
+{
+	background: #00dfc4;
+	border: none;
+}
+
+.formulario__grupo-correcto .formulario__input:valid,
+.formulario__grupo-correcto .formulario__input:focus
+{
+	border: 2px solid #00dfc4;
+}
+
+.formulario__grupo-correcto .formulario__grupo-input .btn-contraseña i
+{
+	color: #00dfc4;
+}
+
+.formulario__grupo-correcto .formulario__grupo-input .btn-contraseña
+{
+    right: 50px;
+}
+
+.formulario__grupo-incorrecto .formulario__label 
+{
+	color: #ff013c;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado
+{
+	color: #ff013c;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input 
+{
+	border: 2px solid #ff013c;
+}
+
+.formulario__grupo-incorrecto .formulario__input:valid ~ .formulario__label,
+.formulario__grupo-incorrecto .formulario__input:focus ~ .formulario__label
+{
+	background: #ff3061;
+	border: none;
+}
+
+.formulario__grupo-incorrecto .formulario__input:valid,
+.formulario__grupo-incorrecto .formulario__input:focus
+{
+	border: 2px solid #ff013c;
+}
+
+.formulario__grupo-incorrecto .formulario__grupo-input .btn-contraseña i
+{
+	color: #ff013c;
+}
+
+.formulario__grupo-incorrecto .formulario__grupo-input .btn-contraseña
+{
+    right: 50px;
+}
+
+/* PANELES */
+.paneles
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 7;
+}
+
+.panel-izquierdo
+{
+    padding: 50px 15px 15px 0px;
+}
+
+.panel .content .subtitulo
+{
+    font-size: 40px;
+    font-family: fuenteParrafo;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #54e4e4;
+    position: relative;
+    text-shadow: 0px 0px 4px #54e4e4;
+}
+
+.panel .content .subtitulo span
+{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #191919;
+    line-height: 55px;
+    top: -5px;
+    border-left: 2px solid #54e4e4;
+
+    animation: efecto-escritura  5s infinite alternate steps(25);
+}
+
+@keyframes efecto-escritura 
+{
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+.panel .content p
+{
+    color: #F4F4F4; 
+    letter-spacing: -2px; 
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+.bton 
+{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 0;
+    color: #F4F4F4;
+    margin-top: 25px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 3px;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-out 200ms;
+    animation: efecto-texto-luz 2s ease-in infinite normal both;
+}
+.bton:hover {
+    color: #54e4e4;
+    text-shadow: 0 0 3px #54e4e4;
+    animation: none !important;
+}
+
+.bton::after,
+.bton::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -3px;
+    top: -3px;
+    border: 3px solid #54e4e4;
+    border-radius: 8px;
+    transition: all ease-out 200ms;
+    animation: efecto-luz 3s ease-in infinite normal both;
+}
+.bton:hover::before,
+.bton:hover::after {
+    border-color: #54e4e4;
+    animation: none !important;
+}
+.bton:hover::before {
+    filter: blur(2px);
+}
+.bton:active {
+    color: #54e4e4;
+    text-shadow: 0 0 0 #54e4e4;
+}
+.bton:active::before,
+.bton:active::after {
+    border-color: #54e4e4;
+    animation: none !important;
+}
+
+@keyframes efecto-texto-luz {
+    from, 20%, 36%, to {
+        color: #F4F4F4;
+    }
+    23% {
+        color: #54e4e4;
+    }
+}
+
+@keyframes efecto-luz {
+    from, 60%, 70%, 95% {
+        border-color: #F4F4F4;
+    }
+    65%, to {
+        border-color: #54e4e4;;
+    }
+}
+
+.image
+{
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 38%;
+}

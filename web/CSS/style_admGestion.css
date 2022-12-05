@@ -1,0 +1,107 @@
+
+/* TARJETAS */
+.tarjetas
+{
+    left: 20%;
+    z-index: 2;
+    display: flex;
+    margin-top: 10px;
+    position: relative;
+    width: calc(100% - 24%);
+    transition: all 0.5s ease;
+    justify-content: space-evenly;
+}
+
+.aside.closed ~ .tarjetas
+{
+    left: 10%;
+    width: calc(100% - 14%);
+}
+
+.info
+{
+    padding: 30px 0px 0 30px;
+}
+
+.info .info-box
+{
+    width: 350px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    background: #F9F9F9;
+    justify-content:flex-start;
+	border: 3px solid #0DCECE;
+    box-shadow: 0px 0px 10px #19191979;
+}
+
+.aside.closed ~ .tarjetas .info-box
+{
+    width: 400px;
+}
+
+.info .info-box i
+{ 
+    font-size: 55px;
+    color: #0DCECE;
+    line-height: 55px;
+    padding: 20px 25px;
+    text-shadow: 1px 2px 2px #19191979;
+}
+
+.info .info-box h3
+{
+    font-size: 28px;
+    margin-bottom: 3px;
+}
+
+.info .info-box span
+{
+    color: #263737;
+    font-size: 17.5px;
+}
+
+
+/* ADICIONALES */
+.adicionales
+{
+    left: 30%;
+    z-index: 3;
+    display: flex;
+    margin-top: 60px;
+    position: relative;
+    width: calc(100% - 45%);
+    justify-content: space-around;
+}
+
+.aside.closed ~ .adicionales
+{
+    left: 17%;
+    width: calc(100% - 30%);
+}
+
+
+/* GRAFICAS */
+.box
+{
+    width: 390px;
+    height: 450px;
+    background: #f9f9ff;
+	border: 3px solid #0DCECE;
+    box-shadow: 0px 0px 10px #19191977;
+    padding-bottom: 8px;
+    border-radius: 25px;
+}
+
+.cabecera_grafica
+{
+    background: #0DCECE;
+    background: -webkit-linear-gradient(to right, #0DCECE,  #54e4e4, #60fff2);
+	background: linear-gradient(to right, #0DCECE,  #54e4e4, #60fff2);	
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 18px 18px 0 0;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="780" pageHeight="842" columnWidth="740" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8ab96c1-e650-4d7c-b795-419954cf924d">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="97"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT P.ide_ped, C.nom_cli, P.tallaPrenda_ped, P.fecha_ped, P.medioPago_ped, P.dir_ped, P.subTotal_ped, P.descuento_ped, P.total_ped, P.estado_ped FROM pedido P INNER JOIN cliente C ON P.ide_cli = C.ide_cli]]>
+	</queryString>
+	<field name="ide_ped" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tallaPrenda_ped" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_ped" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medioPago_ped" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dir_ped" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subTotal_ped" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descuento_ped" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_ped" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_ped" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="ide_ped">
+		<groupExpression><![CDATA[$F{ide_ped}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="446" y="51" width="122" height="34" uuid="a40b6a4d-f3fb-4675-9034-d2b5e5b9d3d0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isItalic="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Dgaudy0@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="20" width="137" height="30" uuid="8823863f-a029-40e6-82d6-9f954071235c"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Creación de reporte:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="20" width="156" height="31" uuid="70154997-e6e8-4f7c-9d07-7a53c8865296"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isItalic="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Centro comercial San Martín]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="587" y="44" width="114" height="30" uuid="429fbdee-0cf6-4350-bc76-271a3c3c2c4f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isItalic="false" isUnderline="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="104" width="740" height="1" uuid="0ac892e0-c6e0-478c-b9fd-dfe57a009772"/>
+			</line>
+			<staticText>
+				<reportElement x="323" y="50" width="128" height="35" uuid="08919f12-ed5d-4519-9f5d-415205dc684a"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Correo electrónico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="323" y="20" width="68" height="30" uuid="0df93eb0-e133-4b0e-8ccc-8ac08acaf304"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="36" y="18" width="197" height="86" uuid="aa8eac8c-3b87-40f8-9153-d1049f561703"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\imagenes\\logo\\logo.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="660" y="68" width="78" height="20" backcolor="#7BEBE8" uuid="15453a1e-6e29-40cb-a2b2-50ebb77a3ec5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="193" y="68" width="74" height="20" backcolor="#7BEBE8" uuid="9a1b12b6-38d7-4dbe-8396-3741e1f08746"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Fecha pedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="269" y="68" width="74" height="20" backcolor="#7BEBE8" uuid="a59c3eff-3005-496c-b6a6-2956c970b12d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Medio Pago]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="-1" y="88" width="739" height="1" forecolor="#B89F7D" backcolor="#0DCECE" uuid="313839d2-8642-47c7-8064-571afbbbc8df"/>
+			</frame>
+			<staticText>
+				<reportElement mode="Opaque" x="585" y="68" width="73" height="20" backcolor="#7BEBE8" uuid="50eda916-c7f3-40b0-a5d9-e8097365d706"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Total Pedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-1" y="68" width="62" height="20" backcolor="#7BEBE8" uuid="f5b49475-e98a-41b4-b260-9ebd6cc2a00b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="245" y="0" width="275" height="46" uuid="4ee26040-578d-41d5-aaf3-03dac33cf7ab"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PEDIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="63" y="68" width="62" height="20" backcolor="#7BEBE8" uuid="4e7aff5a-93ef-4f6c-8cae-8659b0b609f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph spacingAfter="5" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="519" y="68" width="64" height="20" backcolor="#7BEBE8" uuid="fb0fd4fd-f307-49c0-a5b1-9af78c1b09b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="127" y="68" width="64" height="20" backcolor="#7BEBE8" uuid="b33f10d6-6a59-4b3d-a13d-c065d0c2f7d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+					<paragraph spacingAfter="5" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Talla Prendas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="445" y="68" width="72" height="20" backcolor="#7BEBE8" uuid="4ac68417-8e54-4db5-a9ab-ada811154a53"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[SubTotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="345" y="68" width="98" height="20" backcolor="#7BEBE8" uuid="909ec67a-694f-48a3-9c7e-f922edf7f1d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="194" y="0" width="73" height="39" uuid="0b9460dc-2913-4787-94bf-983ceb2767ac"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fecha_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="0" width="63" height="39" uuid="8bcda280-8444-4329-886e-0a9a6c39b8bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descuento_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="0" width="64" height="39" uuid="bb876a6f-c07b-4d56-8158-8597d288afca"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tallaPrenda_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="585" y="0" width="73" height="39" uuid="cc7207fc-0145-408d-9037-33725ef7231f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="72" height="39" uuid="f35d5d7f-af57-4492-af8e-e8ab3aa9f329"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{subTotal_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="662" y="0" width="79" height="39" uuid="11c4c462-1cf3-4fbe-968d-e627e13cc376"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estado_ped}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="43" width="740" height="1" forecolor="#B89F7D" backcolor="#0DCECE" uuid="fffc7e9c-9793-4b56-8d7f-47a229a154c6"/>
+			</frame>
+			<textField>
+				<reportElement x="269" y="0" width="74" height="39" uuid="c4dce864-1d1f-4d01-9603-c95f8b3e123b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{medioPago_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="0" width="62" height="39" uuid="ae2ee7cb-e21d-4331-9f3a-c981c6928135"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ide_ped}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="0" width="62" height="39" uuid="a8e0515f-92cb-4c80-9b79-d10ff319d733"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nom_cli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="0" width="98" height="39" uuid="694af18f-d6df-47e7-906b-c9b327f11734"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dir_ped}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="21" width="328" height="20" uuid="a8acffb3-26a7-405a-ab53-560dafde34c1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Representación impresa de reportes de pedidos de la empresa ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="21" width="66" height="20" uuid="21814549-7ced-4bc1-b68b-b10c9de4e699"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[D'Gaudy.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="654" y="-2" width="103" height="54" uuid="77471633-6fca-4086-b224-f7d0aad8c5f1"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\imagenes\\logo\\checklist.png"]]></imageExpression>
+			</image>
+		</band>
+	</columnFooter>
+</jasperReport>

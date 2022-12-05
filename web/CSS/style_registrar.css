@@ -1,0 +1,52 @@
+
+.contenedor::before
+{
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    left: 48%;
+    background: #191919;
+    transform: translateY(-50%);  
+    border-radius: 50%;
+    transition: 1.8s ease;
+}
+
+.contenedor .formulario-registrar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 500px;
+    height: 500px;
+    padding: 0 10px;
+}
+
+.iniciar-registrarse
+{
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+
+/* PANEL */
+.panel
+{
+    padding: 50px 15px 15px 0px;transform: translateX(800px);
+}
+
+.image
+{
+    width: 65%;
+    margin-top: 6%;
+    margin-right: 55%;
+}

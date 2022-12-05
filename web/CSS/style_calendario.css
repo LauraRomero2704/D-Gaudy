@@ -1,0 +1,344 @@
+
+.cont
+{
+  margin-top: 8%;
+  margin-right: 8%;
+}
+
+.calendario 
+{
+  height: 450px;
+  width: 130%;
+  background-color: #f9f9ff;
+  border-radius: 25px;
+  border: 3px solid #0DCECE;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px #19191977;
+}
+
+.cabecera-calendario 
+{
+  background: #0DCECE;
+	background: -webkit-linear-gradient(to right, #0DCECE,  #54e4e4, #60fff2);
+	background: linear-gradient(to right, #0DCECE,  #54e4e4, #60fff2);	
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f9f9ff;
+  padding: 10px;
+}
+  
+.dias_semana 
+{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  cursor: pointer;
+  color:#565656;
+}
+
+.dias_semana div:hover 
+{
+  color:black;
+  transform: scale(1.2);
+  transition: all .2s ease-in-out;
+}
+
+.dias_semana div 
+{
+  display: grid;
+  place-items: center;
+  color: #686868;
+  height: 65px;
+}
+
+.dias_calendario 
+{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-left: 10px;
+  color: #000000;
+}
+
+.dias_calendario div 
+{
+  width: 37px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  top: -25px;
+  animation: arriba 1s forwards;
+}
+
+.selector_meses 
+{
+  color: #000;
+  font-size: 20px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.selector_meses:hover 
+{
+  transition:all .2s ease-in-out ;
+  transform: scale(1.1);
+}
+
+.selector_años 
+{
+  display: flex;
+  align-items: center;
+}
+
+.cambio_año 
+{
+  color: #191919;
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+  
+.cambio_año:hover 
+{
+  transition:all .2s ease-in-out ;
+  transform: scale(1.2);
+}
+
+#año
+{
+  font-size: 18px;
+  color: #000;
+}
+
+#año:hover
+{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2 ease-in-out;
+}
+
+.dias_calendario div span 
+{
+  font-size: 30px;
+  position: absolute;
+}
+   
+.dias_calendario div:hover 
+{
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  background-color: #60fff2;
+  border-radius: 20%;
+}
+  
+.dias_calendario div.fecha_actual 
+{
+  color: #fff;
+  background: #0DCECE;
+  border-radius: 20%;
+}
+  
+.lista_meses 
+{
+  position: relative;
+  left: 0;
+  top: -42px;
+  border-top: 3px solid #0DCECE;
+  background-color: #e6eaf5;
+  color: #263737;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0px;
+  padding: 8px 0;
+  border-radius: 20px;
+}
+
+.lista_meses > div 
+{
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.lista_meses > div > div 
+{
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.lista_meses > div > div:hover 
+{
+  background-color: #0DCECE;
+  color: #fff;
+  transform: scale(0.9);
+  transition: all 0.2s ease-in-out;
+}
+
+.lista_meses.mostrar 
+{
+  visibility: visible;
+  pointer-events: visible;
+  transition: 0.6s ease-in-out;
+  animation: izquierda .71s forwards;
+}
+
+.lista_meses.ocultar1
+{
+  visibility: hidden;
+}
+
+.lista_meses.ocultar 
+{
+  animation: derecha 1s forwards;
+  visibility: none;
+  pointer-events: none;
+}
+
+.formato_fecha_hora 
+{
+  width: 80%;
+  height: max-content;
+  position: relative;
+  margin: 10px;
+  top: 60px;
+  justify-content: center;
+}
+
+.formato_texto_dia 
+{
+  font-size: 1.4rem;
+  padding-right: 5%;
+  padding-left: 5px;
+  border-right: 3px solid #0DCECE;
+  position: absolute;
+}
+
+.valor_fecha_hora 
+{
+  display: block;
+  height: max-content;
+  width: max-content;
+  position: relative;
+  left: 28%;
+  top: -10px;
+  text-align: center;
+}
+
+.formato_tiempo 
+{
+  font-size: 1.5rem;
+}
+
+.formato_tiempo.ocultarTiempo 
+{
+  animation: ocultar_tiempo 1.5s forwards;
+}
+
+.formato_texto_dia.ocultarTiempo
+{
+  animation: ocultar_tiempo 1.5s forwards;
+}
+
+.formato_fecha.ocultarTiempo 
+{
+  animation: ocultar_tiempo 1.5s forwards;
+}
+
+.formato_texto_dia.funcion_tiempo
+{
+  animation: funcion_tiempo 1s forwards;
+}
+
+.formato_tiempo.funcion_tiempo 
+{
+  animation: funcion_tiempo 1s forwards;
+}
+
+.formato_fecha.funcion_tiempo 
+{
+  animation: funcion_tiempo 1s forwards;
+}
+
+@keyframes arriba 
+{
+  0% 
+  {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% 
+  {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes izquierda 
+{
+  0% 
+  {
+    transform: translatex(230%);
+    opacity: 1;
+  }
+
+  100% 
+  {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+  
+@keyframes derecha 
+{
+  10% 
+  {
+    transform: translatex(0);
+    opacity: 1;
+  }
+
+  100% 
+  {
+    transform: translatex(-150%);
+    opacity: 1;
+  }
+}
+ 
+@keyframes funcion_tiempo 
+{
+  0% 
+  {
+    transform: translatex(250%);
+    opacity: 1;
+  }
+
+  100% 
+  {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+}
+ 
+@keyframes ocultar_tiempo 
+{
+  0% 
+  {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+
+  100% 
+  {
+    transform: translatex(-370%);
+    opacity: 1;
+  }
+}
+

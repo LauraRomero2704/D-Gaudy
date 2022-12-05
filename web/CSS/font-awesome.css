@@ -1,0 +1,17 @@
+@font-face
+{
+    font-family: fuenteLogo;
+    src: url(../FUENTES/Lemon\ Love.ttf)
+}
+
+@font-face
+{
+    font-family: fuenteTitulo;
+    src: url(../FUENTES/Little\ Comet\ Demo\ Version.otf);
+}
+
+@font-face
+{
+    font-family: fuenteParrafo;
+    src: url(../FUENTES/CaviarDreams.ttf);
+}

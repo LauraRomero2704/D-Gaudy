@@ -1,0 +1,207 @@
+
+/* DATATBLE */	
+.datatable
+{
+  left: 19%;
+  z-index: 2;
+  min-height: 100vh;
+  position: relative;
+  width: calc(100% - 19.5%);
+  transition: all 0.5s ease;
+}
+
+.aside.closed ~ .datatable
+{
+  left: 4%;
+  width: calc(100% - 4%);
+}
+
+.container
+{
+	margin-top: 40px;
+	width: 98%; 
+}
+
+.stripe
+{
+	padding-top: 15px; 
+	padding-bottom: 15px;
+}
+
+/* CABECERA */
+.cabecera
+{
+	font-size: 17px;
+	text-align: center;
+	background: #0DCECE;
+	background: -webkit-linear-gradient(to right, #0DCECE,  #54e4e4, #83fff4);
+	background: linear-gradient(to right, #0DCECE,  #54e4e4, #83fff4);	
+}
+
+/* FILTRADORES */
+.dataTables_wrapper select,
+.dataTables_wrapper .dataTables_filter input 
+{
+	color: #191919;
+	padding-left: 8px;
+	padding-right: 8px; 
+	padding-top: 8px; 		
+	padding-bottom: 8px; 		
+	line-height: 1.25; 
+	border-width: 2px;
+	border-radius: 4px; 		
+	border-color: #0DCECE;
+	background-color: #F9F9F9;
+}
+
+.cliente1
+{
+	background: red;
+	margin-left: -50%;
+}
+
+/* OPCIONS CRUD */
+table tbody tr 
+{
+	text-align: center;
+}
+
+table tbody tr i
+{
+	cursor: pointer;
+	font-size: 22px;
+}
+
+table tbody tr .i
+{
+	font-weight: 550;
+	color: #ec466c;
+}
+
+table tbody tr .a
+{
+	font-weight: 580;
+	color: #0DCECE;
+}
+
+table tbody tr .e
+{
+	font-weight: 550;
+	color: #4fd3d3;
+}
+
+/* HOVER FILAS */
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover 
+{
+	background-color: #0a97973b !important;
+}
+			
+/* BOTONES DE PAGINACION */
+.dataTables_wrapper .dataTables_paginate .paginate_button		
+{
+	font-weight: 700;
+	border-radius: 4px;
+	border: 1px solid transparent;
+}
+		
+/* BOTONES DE PAGINACION -> SELECCIONADOS */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current	
+{
+	color: #262626 !important;	
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); 
+	font-weight: 700;		
+	border-radius: 4px;	
+	background: #41e5e5 !important;
+	background: -webkit-linear-gradient(to right, #41e5e5, #83fff4);
+	background: linear-gradient(to right, #41e5e5, #83fff4);
+	border: 1px solid transparent;
+}
+
+/* BOTONES DE PAGINACION -> HOVER */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover		
+{
+	color: #262626 !important;	
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+	font-weight: 700;
+	border-radius: 4px;	
+	background: #62f1e5 !important;
+	border: 1px solid transparent;
+}
+
+/* BORDE INFERIOR */
+table.dataTable.no-footer 
+{
+	border-bottom: 1px solid #e2e8f0;
+	margin-top: 10px;
+	margin-bottom: 0.75em;
+}
+		
+/* ICONO RESPONSIVE */
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+{
+	margin-top: 10px;
+	background-color: #62f1e5 !important;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>.cliente>td:first-child:before, .hola.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+{
+	margin-top: 27px;
+}
+/* RESPONSIVE */
+@media (max-width: 1400px)
+{
+	table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+	{
+		margin-top: 40px;
+	}
+
+	.datatable
+	{
+		left: 34%;
+		width: calc(100% - 34%);
+	}
+
+	.aside.closed ~ .datatable
+	{
+		left: 11%;
+		width: calc(100% - 11%);
+	}
+
+	.container
+	{
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 1300px)
+{
+	table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+	{
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 1200px)
+{
+	table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+	{
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 1100px)
+{
+	table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+	{
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 900px)
+{
+	table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before 
+	{
+		margin-top: 50px;
+	}
+}
+		
