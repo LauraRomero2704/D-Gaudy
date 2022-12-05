@@ -4,6 +4,7 @@
 <p align="center"><img src="web/IMAGES/Principal.png"/></p> 
 <p align="center"><img src="web/IMAGES/Personalizar.png"/></p> 
 
+
 ## Construido con 🛠️
 
 _Herramientas Utilizadas_
@@ -18,6 +19,6 @@ _Herramientas Utilizadas_
 
 ## Autores ✒️
 
-* **Laura Romero** - *Diseñadora FrontEnd y Analista de Bases de Datos * - [LauraRomero](https://github.com/LauraRomero2704)
-* **Yuliana Narvaez** - *Diseñadora BackEnd y Analista de Funcional * - [YulianaNarvaez](https://github.com/yuliana97)
-* **Juan Romero** - *Diseñadora BackEnd y Analista de Requisitos * - [JuanRomero](https://github.com/JuanRomero08)
+* **Laura Romero** - Diseñadora FrontEnd y Analista de Bases de Datos - [LauraRomero](https://github.com/LauraRomero2704)
+* **Yuliana Narvaez** - Diseñadora BackEnd y Analista de Funcional - [YulianaNarvaez](https://github.com/yuliana97)
+* **Juan Romero** - Diseñadora BackEnd y Analista de Requisitos - [JuanRomero](https://github.com/JuanRomero08)
