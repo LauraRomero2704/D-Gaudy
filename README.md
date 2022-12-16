@@ -21,5 +21,5 @@ _Herramientas Utilizadas_
 ## Autores ✒️
 
 * **Laura Romero** - Diseñadora FrontEnd y Analista de Bases de Datos - [LauraRomero](https://github.com/LauraRomero2704)
-* **Yuliana Narvaez** - Diseñadora BackEnd y Analista de Funcional - [YulianaNarvaez](https://github.com/yuliana97)
-* **Juan Romero** - Diseñadora BackEnd y Analista de Requisitos - [JuanRomero](https://github.com/JuanRomero08)
+* **Yuliana Narvaez** - Diseñadora BackEnd y Analista Funcional - [YulianaNarvaez](https://github.com/yuliana97)
+* **Juan Romero** - Diseñador BackEnd y Analista de Requisitos - [JuanRomero](https://github.com/JuanRomero08)
