@@ -1,7 +1,7 @@
 <h1 align="center"> D'Gaudy </h1>
 <h4 align="center">Sistema de Información para la Personalización y Pedidos de Prendas de Jean </h4>
 
-
+<br>
 <p align="center"><img src="web/IMAGES/Principal.png"/></p> 
 <p align="center"><img src="web/IMAGES/Personalizar.png"/></p> 
 
